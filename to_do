@@ -6,3 +6,8 @@ download audacity to sonify the sublime texts and pdf of sarah pink's sensory et
 - make a spectrogram of sonification
 
 - audacity requires the raw data to be longer than one second in order to use it for paulstretch?
+
+
+
+--gource:
+	output video to .mp4, embed it in your html file. maybe in its own page. Can you build the web page as your whole presentation? and also include your lon/lat as google maps in each page?
