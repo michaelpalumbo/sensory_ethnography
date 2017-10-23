@@ -1,3 +1,15 @@
+<<<<<<< HEAD
 #.gitignore
 *.gitignore
 */.gitignore
+=======
+# .DS_Store
+*.DS_Store
+*/.DS_Store
+
+
+# ignore copyrighted material
+*/texts/*
+/texts/*
+*/texts
+>>>>>>> master
