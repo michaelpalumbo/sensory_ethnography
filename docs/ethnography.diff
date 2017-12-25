@@ -1,0 +1,53 @@
+diff --git a/docs/index.html b/docs/index.html
+index 05c7514..98bbac4 100644
+--- a/docs/index.html
++++ b/docs/index.html
+@@ -1,32 +1,44 @@
+ <HTML>
+ <HEAD>
+ <TITLE>Presentation on Sarah Pink's "Doing Sensory Ethnography: Rethinking ethnography through the senses"</TITLE>
+ </HEAD>
+ <BODY BGCOLOR="FFFFFF">
+ <CENTER><IMG SRC="clouds.jpg" ALIGN="BOTTOM"> </CENTER>
+ 
+ For Pink, "A methodology based in and a commitment to understanding the senses provides a route to forms of nowledge and knowing not accounted for in conventional forms of ethnography. It often leas us to the normally not spoken, the invisible and the unexpected -- those things that people do not perhaps neessarily think it would be worth mentioning, or those things that tend to be felt or sensed ratber than spoken about." (Pink 53)
+ <HR>
+ <a href="http://somegreatsite.com">Link Name</a>
+ is a link to another nifty site
+ 
+ 
+ <p> <a name="modulation"> note to self, go to page 30 of pink and insert your marginalia and shimojo and shams and newell and shams. </a>
+ 
+ <p><h2> Learning </h2>
+ 
+ 	For example, following Wenger's position that "...learning ... [is] the ability to negotiate new meanings," I have create explicit links between notes in this document to augment this. i.e. 
+ 	<p> Linking <a href="#modulation">modulation to</a> where Pink notes that "...Seremetakis suggests that 'sensory memory or the mediation on the historical substance of experience is not mere repetition but transformation that brings the past inot the present as a natal event. (1994: 7)" (Pink 44)
+ 
+-		test
+-		test again
+-		
++	
+ 
+ <HR>
+ </BODY>
+ </HTML>
+ 
+ 
+ can you make hyperlinks to different sections of the html document. for example, allowing you to make explicit links between how you make connections within idea of the book. 
+ 
+ 
++fhfh
++
++
++fhfh
++
++
++fhfhf
++
++
++sjsj
++
++
++
++j this change will be available at <a href="page4.html"> dg
+\ No newline at end of file
