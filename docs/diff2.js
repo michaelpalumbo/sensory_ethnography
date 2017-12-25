@@ -24,8 +24,8 @@ var files = [
   console.log('%s changed.', name);
 
 child5 = exec("ls -lR /Users/mp/thst6329/docs/*.html | wc -l", function (error, stdout, stderr)
-{
-	console.log(stdout + " number of files")
+{ var count = stdout
+	console.log(count)
 });
 
 //{myFuncCalls++;}
