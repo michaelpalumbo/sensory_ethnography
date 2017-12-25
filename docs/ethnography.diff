@@ -1,5 +1,5 @@
 diff --git a/docs/index.html b/docs/index.html
-index f4521a1..42192ea 100644
+index 42192ea..1303ea8 100644
 --- a/docs/index.html
 +++ b/docs/index.html
 @@ -1,44 +1,44 @@
@@ -33,8 +33,8 @@ index f4521a1..42192ea 100644
  can you make hyperlinks to different sections of the html document. for example, allowing you to make explicit links between how you make connections within idea of the book. 
  
  
--fhfh test test test tetes sgs sh ss 
-+fhfh test test test tetes sgs sh ss  
+-fhfh test test test tetes sgs sh ss  
++fhfh test test test tetes sgs sh ss  dg
  
  
  fhfh
