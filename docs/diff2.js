@@ -10,6 +10,8 @@ var child3;
 var child4;
 
 
+const delay = require('delay');
+
 
 var files = [
   //'/path/to/file',
@@ -25,12 +27,24 @@ myFuncCalls++;
 }
   console.log(myFuncCalls);
 
-child = exec("git diff -U$(wc -l /Users/mp/thst6329/docs/index.html | xargs) > ethnography.diff");
+child = exec("git diff -U$(wc -l /Users/mp/thst6329/docs/index.html | xargs) > ethnography.diff")
 child2 = exec("diff2html -i file ethnography.diff -F page" + myFuncCalls + ".html -- -M HEAD~1");
-child3 = exec("git add .");
+        // Executed after 200 milliseconds 
+
+
+delay(200)
+    
+    .then(() => {
+    	child3 = exec("git add .");
+    	child4 = exec("git commit -m \"autocommit " + myFuncCalls + " for the ethnography paper\"");
+
+
+        // Executed after 200 milliseconds 
+    });
+
+
 
 	
-child4 = exec("git commit -m \"autocommit " + myFuncCalls + " for the ethnography paper");
 
 
 
