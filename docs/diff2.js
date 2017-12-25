@@ -32,20 +32,23 @@ child2 = exec("diff2html -i file ethnography.diff -F page" + myFuncCalls + ".htm
         // Executed after 200 milliseconds 
 
 
-delay(200)
+delay(500)
     
     .then(() => {
     	child3 = exec("git add .");
-    	child4 = exec("git commit -m \"autocommit " + myFuncCalls + " for the ethnography paper\"");
-
-
-        // Executed after 200 milliseconds 
+    	
     });
 
 
 
-	
+	delay(1000)
+    
+    .then(() => {
+    	child4 = exec("git commit -m \"autocommit " + myFuncCalls + " for the ethnography paper\"");
+    	console.log("autocommit " + myFuncCalls + " for the ethnography paper")
 
+        // Executed after 200 milliseconds 
+    });
 
 
 
