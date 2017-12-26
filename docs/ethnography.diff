@@ -1,8 +1,8 @@
 diff --git a/docs/index.html b/docs/index.html
-index 2048e1d..815b391 100644
+index 45206fb..6068e38 100644
 --- a/docs/index.html
 +++ b/docs/index.html
-@@ -1,208 +1,208 @@
+@@ -1,148 +1,148 @@
  <HTML>
  <HEAD>
  <TITLE>Imaginative Ethnography Paper (placeholder Title)</TITLE>
@@ -14,13 +14,15 @@ index 2048e1d..815b391 100644
  <h3>Michael Palumbo</h3>
  <HR>
  
+ 
  <p> some notes about creative usage of this webpage. 
  	<br>
  [would be great to embed the pageNN.html of the matching indexNN.html, and embed that in an iframe somewhere in this page. however i don't yet know how to do that in html]
  
  <p>
  
- 	From the beginning of this course, I approached my learning process by experimenting with documentation. The intention, at the outset, was perhaps just simply to continue on from previous experiments with documentation of the ontogenesis (Boesch 182) of a project, as described in [citation and link for dvcs and research-creation, and the accelerationism and version control papers.] These earlier papers explore the creative potential of leveraging an already established archival system that is used by teams of programmers to manage the changes made to a given project towards expanded uses for research-creation. I enrolled in the Performance Ethnography course because I wanted to expand my usage of version control sytems through a type of enquiry that, as turned out to be oft-repeated in class, is not a method ...
+-	From the beginning of this course, I approached my learning process by experimenting with documentation. The intention, at the outset, was perhaps just simply to continue on from previous experiments with documentation of the ontogenesis (Boesch 182) of a project, as described in [citation and link for dvcs and research-creation, and the accelerationism and version control papers.] These earlier papers explore the creative potential of leveraging an already established archival system that is used by teams of programmers to manage the changes made to a given project towards expanded uses for research-creation. I enrolled in the Performance Ethnography course because I wanted to expand my usage of version control sytems through a type of enquiry that, as turned out to be oft-repeated in class, is not a method ...
++	From the beginning of this course, I approached my learning process by experimenting with documentation. The intention, at the outset, was perhaps just simply to continue on from previous experiments with documentation of the ontogenesis (Boesch 182) of a project, as described in [citation and link for dvcs and research-creation, and the accelerationism and version control papers.] These earlier papers explore the creative potential of leveraging an already established archival system that is used by teams of programmers to manage the changes made to a given project towards expanded uses for research-creation. I enrolled in the Performance Ethnography course because I wanted to expand my usage of version control sytems through a type of enquiry that, as turned out to be oft-repeated in class, is not a method, but "...a methodology because it is improvisational." (Kazubowski-Houston 2017 [[week 1 cite]])
  
  	<p> 
  		The mechanisms of version control systems concern the way in which the changes to a work are represented. Where Professor Kazubowski-Houston told us at during the first class that 
@@ -38,8 +40,7 @@ index 2048e1d..815b391 100644
  
  
  <p> 
--	For instance, during the latter few classes of the course, in-class notes were taken using Sangwon Lee's <a href="http://livewriting.eecs.umich.edu/"><i>Live Writing</i></a> interface (Lee, as can be <a href="http://livewriting.eecs.umich.edu/?aid=YUdyxM7qIA74QMRSv14B">seen here.</a>
-+	For instance, during the latter few classes of the course, in-class notes were taken using Sangwon Lee's <a href="http://livewriting.eecs.umich.edu/"><i>Live Writing</i></a> interface (Lee 2015), as can be <a href="http://livewriting.eecs.umich.edu/?aid=YUdyxM7qIA74QMRSv14B">seen here.</a>
+ 	For instance, during the latter few classes of the course, in-class notes were taken using Sangwon Lee's <a href="http://livewriting.eecs.umich.edu/"><i>Live Writing</i></a> interface (Lee 2015), as can be <a href="http://livewriting.eecs.umich.edu/?aid=YUdyxM7qIA74QMRSv14B">seen here.</a>
  
  	
  
@@ -66,69 +67,9 @@ index 2048e1d..815b391 100644
  
  	<p>
  		<p>
- 
- <figure> 
-   <figcaption>Storing the full context of each save state of this paper 'index.html'</figcaption>
- 
- <pre>
-   <code contenteditable spellcheck="false">
- var watch = require('node-watch'); 
- 
- var count = 0; //this is the total number of .html files already in the folder. 
- 
- var util = require('util')
- var exec = require('child_process').exec;
- var child;
- var child2;
- var child3;
- var child4;
- var child5;
- var child6;
- 
- const delay = require('delay');
- 
- var files = [
-   //'/path/to/file',
-   'index.html'
- ];
- 
- watch('index.html', { recursive: true }, function(evt, name) {
-   console.log('%s changed.', name);
- 
- {count++;}
- 
- // output current state of git to a .diff file
- child = exec("git diff -U$(wc -l /Users/mp/thst6329/docs/index.html | xargs) > ethnography.diff")
- 
- child6 = exec("cp /Users/mp/thst6329/docs/index.html /Users/mp/thst6329/docs/index" + count + ".html")
- //convert the .diff file to html using diff2html
- child2 = exec("diff2html -i file ethnography.diff -F page" + count + ".html -- -M HEAD~1");
- console.log("page" + count + ".html")
-         // Executed after 200 milliseconds 
- 
- //couldn't get the 'promise' to work, so using just a delay, add the unstaged changes
- delay(500)
-    
-     .then(() => {
-     	child3 = exec("git add .");
-     	
-     });
- 
- 
- //wait until end, then autocommit!
- delay(1000)
-     
- .then(() => {
- 	child4 = exec('git commit -m "autocommit " + count + " for the ethnography paper"');
-     console.log("autocommit " + count + " for the ethnography paper")
- 
-         // Executed after 200 milliseconds 
-     });
- });
- 
-     </code>
-   </pre>
- </figure>
+-
++Featured below is the code for the program that produces both a copy of the index.html document and its full-context diff in html for each time the file was saved:
+ <iframe src="diff2js.html" width=100% height="300"></iframe>
  
  			<p>
  				<p>
