@@ -1,8 +1,8 @@
 diff --git a/docs/index.html b/docs/index.html
-index 99b9326..29975dd 100644
+index bcf7b24..13fad67 100644
 --- a/docs/index.html
 +++ b/docs/index.html
-@@ -1,44 +1,44 @@
+@@ -1,44 +1,35 @@
  <HTML>
  <HEAD>
  <TITLE>Presentation on Sarah Pink's "Doing Sensory Ethnography: Rethinking ethnography through the senses"</TITLE>
@@ -21,7 +21,8 @@ index 99b9326..29975dd 100644
  <p><h2> Learning </h2>
  
  	For example, following Wenger's position that "...learning ... [is] the ability to negotiate new meanings," I have create explicit links between notes in this document to augment this. i.e. 
- 	<p> Linking <a href="#modulation">modulation to</a> where Pink notes that "...Seremetakis suggests that 'sensory memory or the mediation on the historical substance of experience is not mere repetition but transformation that brings the past inot the present as a natal event. (1994: 7)" (Pink 44)
+-	<p> Linking <a href="#modulatsion">modulation to</a> where Pink notes that "...Seremetakis suggests that 'sensory memory or the mediation on the historical substance of experience is not mere repetition but transformation that brings the past inot the present as a natal event. (1994: 7)" (Pink 44)
++	<p> Linking <a href="#modulation">modulation to</a> where Pink notes that "...Seremetakis suggests that 'sensory memory or the mediation on the historical substance of experience is not mere repetition but transformation that brings the past inot the present as a natal event. (1994: 7)" (Pink 44)
  
  	
   s
@@ -33,19 +34,18 @@ index 99b9326..29975dd 100644
  can you make hyperlinks to different sections of the html document. for example, allowing you to make explicit links between how you  make connections within idea of the book. 
  
  
- fhfh test test test tetes sgs sh ss  dg
+-fhfh test test test tetes sgs sh ss  dg
  
+-sdf	d
+-fhfh
+ 
+ 
+-fhfhf
 -
-+s
- fhfh
- 
- 
- fhfhf
- 
- 
- sjsj
- dh s
- 
+-
+-sjsj
+-dh s
+-
  
  j this change will be available at <a href="page4.html"> dg test s d
 \ No newline at end of file
