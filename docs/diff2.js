@@ -10,7 +10,7 @@ var child3;
 var child4;
 var child5;
 
-var count; //this is the total number of .html files already in the folder. 
+var count = 0; //this is the total number of .html files already in the folder. 
 
 
 const delay = require('delay');
