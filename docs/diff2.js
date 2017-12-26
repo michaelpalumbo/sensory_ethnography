@@ -54,7 +54,7 @@ delay(1000)
     
 .then(() => {
 	child4 = exec("git commit -m \"autocommit " + count + " for the ethnography paper\"");
-    console.log("autocommit " + count + " for the ethnography paper")
+    console.log(child4)
 
         // Executed after 200 milliseconds 
     });
