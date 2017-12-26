@@ -1,17 +1,19 @@
 diff --git a/docs/index.html b/docs/index.html
-index bcf7b24..13fad67 100644
+index 71c91ef..1da28e9 100644
 --- a/docs/index.html
 +++ b/docs/index.html
-@@ -1,44 +1,35 @@
+@@ -1,35 +1,37 @@
  <HTML>
  <HEAD>
- <TITLE>Presentation on Sarah Pink's "Doing Sensory Ethnography: Rethinking ethnography through the senses"</TITLE>
+ <TITLE>Imaginative Ethnography Paper (placeholder Title)</TITLE>
  </HEAD>
  <BODY BGCOLOR="FFFFFF">
  <CENTER><IMG SRC="clouds.jpg" ALIGN="BOTTOM"> </CENTER>
  
++
  For Pink, "A methodology based in and a commitment to understanding the senses provides a route to forms of nowledge and knowing not accounted for in conventional forms of ethnography. It often leas us to the normally not spoken, the invisible and the unexpected -- those things that people do not perhaps neessarily think it would be worth mentioning, or those things that tend to be felt or sensed ratber than spoken about." (Pink 53)
  <HR>
++<a href="index1.html">This is how the document began, as an abandoned attempt at writing a web page for my presentation in class on Sarah Pink's Sensory Ethnography.</a>
  <a href="http://somegreatsite.com">Link Name</a>
  is a link to another nifty site
  
@@ -21,8 +23,7 @@ index bcf7b24..13fad67 100644
  <p><h2> Learning </h2>
  
  	For example, following Wenger's position that "...learning ... [is] the ability to negotiate new meanings," I have create explicit links between notes in this document to augment this. i.e. 
--	<p> Linking <a href="#modulatsion">modulation to</a> where Pink notes that "...Seremetakis suggests that 'sensory memory or the mediation on the historical substance of experience is not mere repetition but transformation that brings the past inot the present as a natal event. (1994: 7)" (Pink 44)
-+	<p> Linking <a href="#modulation">modulation to</a> where Pink notes that "...Seremetakis suggests that 'sensory memory or the mediation on the historical substance of experience is not mere repetition but transformation that brings the past inot the present as a natal event. (1994: 7)" (Pink 44)
+ 	<p> Linking <a href="#modulation">modulation to</a> where Pink notes that "...Seremetakis suggests that 'sensory memory or the mediation on the historical substance of experience is not mere repetition but transformation that brings the past inot the present as a natal event. (1994: 7)" (Pink 44)
  
  	
   s
@@ -34,18 +35,9 @@ index bcf7b24..13fad67 100644
  can you make hyperlinks to different sections of the html document. for example, allowing you to make explicit links between how you  make connections within idea of the book. 
  
  
--fhfh test test test tetes sgs sh ss  dg
- 
--sdf	d
--fhfh
  
  
--fhfhf
--
--
--sjsj
--dh s
--
+ 
  
  j this change will be available at <a href="page4.html"> dg test s d
 \ No newline at end of file

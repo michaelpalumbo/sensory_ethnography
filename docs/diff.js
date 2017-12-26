@@ -25,7 +25,13 @@ myFuncCalls++;
 }
   console.log(myFuncCalls);
 
-child = exec("git diff -U$(wc -l /Users/mp/thst6329/docs/index.html | xargs) > ethnography.diff", "diff2html -i file ethnography.diff -F page" + myFuncCalls + ".html -- -M HEAD~1", "git add .", "git commit -m \"autocommit " + myFuncCalls + " for the ethnography paper\"");
+child = exec("git diff -U$(wc -l /Users/mp/thst6329/docs/index.html | xargs) > ethnography.diff")
+child2 = exec("diff2html -i file ethnography.diff -F page" + myFuncCalls + ".html -- -M HEAD~1");
+child3 = exec("git add .");
+
+	
+child4 = exec("git commit -m \"autocommit " + myFuncCalls + " for the ethnography paper\"");
+
 
 
 
