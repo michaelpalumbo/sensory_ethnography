@@ -48,42 +48,25 @@
 	<p>Following a critical reflexivity, I also questioned the intention and effect of framing the entire writing process in one singular, linear representation -- an endurance performance, if you will. Who would this serve? Through this I became conscious of a desire to perform a level of intelligence and 'put-together-ness'. Along this analysis of my own anxiety surrounding the presentation of myself in my work and process, I asked to whom and for what purpose would a very long video serve? What might one conclude about myself as a performer that I, at the outset at least, expected that a viewer would watch the entirety of a paper's coming into being? Further, while the video would purport to present my entire mental process as contemporaneously written text, it might give rise to a false narrative of an author with a consistent, singularly focused mind, rather than one that paused to do tasks such as laundry, devote time to serious procrastination, and what, at times, I might rather be doing. 
 		<p>			
 
-	I began to wonder what, when freed from preoccupations with the macrotemporal (Roads 3) accounting and subsequent representation of this paper's ontogenesis, what specific action could define the shorter temporal segmentations of the process? This particular problem offered the potential of a new way of approaching the work. 
-	<p>
-
-		For example, the following is how the ethnographic paper actually began: as a previously abandoned attempt at writing a web page for my in-class presentation on Sarah Pink's <i>Sensory Ethnography</i>: 
-<p>
-<blockquote><p><iframe src="_startpoint_index.html" width=100% height="400"></iframe></blockquote>
-
-	<p>
-		I had been looking at it and several other of my notes from that class for an entry point into starting my writing process and began, rather absent-mindedly, to begin writing this paper inside this earlier document. This carries forward a practice that I experimented with leading up to that presentation, where I wrote marginalia in the pages of my copy of Sensory Ethnography with the full intention of sharing the book with the class during my presentation. So it seems fitting that the point of articulation that segments this ethnographic text's beginning as a <b><u>D</u></b>ocument is that very same act carried out in recursion. 
-		<p>
-	I discovered that this actually speaks a little to my process, as it is helpful to begin with a page that has something on it, regardless of whether that content will remain in a later version</p>
-	<p>
-
-
-	While the VCS used in the aforementioned papers written in the spring of last year was sufficient for the contemporaneous documentation of changes to a project and the analysis of data contained therein, it a uses revision tracking algorithm that stores whatever lines of a document have changed. Referred to as delta compression (cite), this method saves storage space because it does not store the full contents of the file at each state save, but instead collects the differences between the current version and its immediate precedent version and stores them in a type of file called <i>.diff</i>. While this method is certainly beneficial for reducing the amount of data transmitted between collaborators, and is suitable for retrieving an older version, the diff's representation of a file, when taken out of the context of its nearest versions (the version before and after it), may not provide a viewer with enough information of the document's role in the overall project. 
+	I began to wonder what, when freed from preoccupations with the macrotemporal (Roads 3) accounting and subsequent representation of this paper's ontogenesis, what specific action could define the shorter temporal segmentations of the process? This particular problem offered the potential of a new way of approaching the work. While the VCS used in the aforementioned papers written in the spring of last year was sufficient for the contemporaneous documentation of changes to a project and the analysis of data contained therein, it a uses revision tracking algorithm that stores whatever lines of a document have changed. Referred to as delta compression (cite), this method saves storage space because it does not store the full contents of the file at each state save, but instead collects the differences between the current version and its immediate precedent version and stores them in a type of file called <i>.diff</i>. While this method is certainly beneficial for reducing the amount of data transmitted between collaborators, and is suitable for retrieving an older version, the diff's representation of a file, when taken out of the context of its nearest versions (the version before and after it), may not provide a viewer with enough information of the document's role in the overall project. 
 		<p>
 
 	<blockquote><p><iframe src="_lacking_context.html" width=100% height="400"></iframe>
 	Note: conversion of the .diff into HTML formatting handles by the diff2html library, by <a href="https://github.com/rtfpessoa">rtfpessoa</a></blockquote>
 
-	I wanted to have a copy of each saved state of this ethnographic document, paired with its corresponding diff which would include the full context of everything I had already typed in the document. It would also be very helpful to have the program convert the latter into HTML so that there could be more options for how to make use of it in the final webpage, and so that I would not need to do this step for every single diff generated, which, at the <a href="page133.html" target="_blank">time of this writing, is up to 133</a>. I set out to write a small computer program using node.js [[CITE]] which would run on the command line in the background while I worked. 
+	I wanted to have a copy of each saved state of this document, paired with its corresponding diff that included the full context of everything I had already typed in the document. Ideally, it would be nice to have something that converted the latter into html so that there could be more options for how to make use of it in the final webpage, and so that I would not need to do this step for every single diff generated which, at the <a href="page133.html" target="_blank">time of this writing, is up to 133</a>. I set out to write a small computer program using node.js [[CITE]] which would run on the command line in the background while I worked. The first component of the program would be to collect the diff information alongside its entire context from a new save state and output it in html. After a few tries, I came across a javascript library called <i>diff2html</i> (Fernandez DATE) that converts .diff files to .html. 
+
+
+	The result was that for each time that I saved this very document, a copy would be produced and renamed with its numbered place in the project's history, along with a diff that included the full scope of the state it is describing. 
+
 
 	<p>
-	The first step that the program would need to complete would be to watch this document I am writing -- whose filename is <i>index.html</i> -- for modifications. In other words, each time I saved index.html, the program would notice this and begin to create the files I wanted. 
-	<p>
-	Once a save has been noticed, the program would then need to request a diff from the version control system, collate it alongside its full context within the document, and convert it to html. After a few tries, I came across a javascript library called <i>diff2html</i> (Fernandez DATE) that converts .diff files to .html. 
-
-	<!--The result was that for each time that I saved this very document, a copy would be produced and renamed with its numbered place in the project's history, along with a modified diff that included the full scope of the state it is describing.-->
-
-	<p>
-	The last step would be to make sure that the version control system is now also tracking the two new files that were generated by the program, so that eventually, when the site is finished, all of the states and diffs would be stored on the remote server and accessible to the visitor of the site. 
-
-	<p>
-	Featured below is the code for the program that produces both a copy of the index.html document and its full-context diff in html for each time the file was saved:
-
+		<p>
+Featured below is the code for the program that produces both a copy of the index.html document and its full-context diff in html for each time the file was saved:
 <iframe src="diff2js.html" width=100% height="300"></iframe>
+
+			<p>
+				<p>
 
 
 
@@ -137,6 +120,13 @@ describe and critically examine their findings through analytical, creative, and
 <p>
 
 
+
+For Pink, "A methodology based in and a commitment to understanding the senses provides a route to forms of knowledge and knowing not accounted for in conventional forms of ethnography. It often leads us to the normally not spoken, the invisible and the unexpected -- those things that people do not perhaps neessarily think it would be worth mentioning, or those things that tend to be felt or sensed ratber than spoken about." (Pink 53)
+
+
+This is how the document began, as a previously abandoned attempt at writing a web page for my presentation in class on Sarah Pink's Sensory Ethnography. This speaks a little to my process, I prefer to start with a page that has something on it, regardless of whether that content will remain in a later version: 
+<p>
+<blockquote><p><iframe src="_startpoint_index.html" width=100% height="400"></iframe></blockquote>
 
 
 
