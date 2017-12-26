@@ -33,9 +33,9 @@
 
 
 <p> 
-	For instance, during the latter few classes of the course, in-class notes were taken using Sangwon Lee's <a href="http://livewriting.eecs.umich.edu/"><i>Live Writing</i></a> interface (Lee 2015), as can be <a href="http://livewriting.eecs.umich.edu/?aid=YUdyxM7qIA74QMRSv14B">seen here.</a>
+	For instance, during the latter few classes of the course, in-class notes were taken using Sangwon Lee's <i>Live Writing</i> interface, as can be seen here:
 
-	
+	http://livewriting.eecs.umich.edu/?aid=YUdyxM7qIA74QMRSv14B
 
 	<p> It is worthwhile to point out that from each experiment in form and representation came at least one desire to try and use this form somewhat differently the next time. For example, after using the Live Writing website for a few note-taking sessions, I began to want to embed the playback in a web page. This was motivated by wanting a visitor to remain on the page instead of linking outward. However, due to a security restriction placed by Lee into that website's code [what was the name of that problem? something to do with allowing embedding in iframes? search notes for this] this simply was not going to be possible.
 	<p> I had been introduced to Sangwon just one week previously, and so in response to my request for assistance in embedding the playback of my writing in a page, he recommended that I try using a similar tool called Scrimba. Lee and the developers of Scrimba have differnt goals in mind for their work, but what their projects share is the ability to capture the input of text in real-time, and allow anyone to play it back. Where they differ, is that Lee's project is better suited towards creative and/or limited research writing, while Scrimba is designed for live programming, which is an educational tool. With Scrimba, I was suddenly able to write again in HTML, and render it to a webpage all within the same recording. I used it thusly in the <a href="https://blackcreekscores.weebly.com"><i>Black Creek Scores</i></a> project to create a <a href="https://blackcreekscores.weebly.com/#score_3">short text and image-based graphic score</a> of my path through the creek and some of the thoughts I had along the way. 
@@ -47,87 +47,10 @@
 	<p>Following a critical reflexivity, I also questioned the intention and effect of framing the entire writing process in one singular, linear representation -- an endurance performance, if you will. Who would this serve? Through this I became conscious of a desire to perform a level of intelligence and 'put-together-ness'. Along this analysis of my own anxiety surrounding the presentation of myself in my work and process, I asked to whom and for what purpose would a very long video serve? What might one conclude about myself as a performer that I, at the outset at least, expected that a viewer would watch the entirety of a paper's coming into being? Further, while the video would purport to present my entire mental process as contemporaneously written text, it might give rise to a false narrative of an author with a consistent, singularly focused mind, rather than one that paused to do tasks such as laundry, devote time to serious procrastination, and what, at times, I might rather be doing. 
 		<p>			
 
-	I began to wonder what, when freed from preoccupations with the macrotemporal (Roads 3) accounting and subsequent representation of this paper's ontogenesis, what specific action could define the shorter temporal segmentations of the process? This particular problem offered the potential of a new way of approaching the work. While the VCS used in the aforementioned papers written in the spring of last year was sufficient for the contemporaneous documentation of changes to a project, it used a lean method of revision tracking referred to as delta encoding. As a means of saving space, rather than store every new state of the project in the archive, git instead stores only what has changed since the last saved state in a file called a 'diff' [[cite git?]]. [[could mention this is similar to how video compression works, ie. only note the changed pixels from frame to frame, except for the keyframe]]. While this method is suitable for retrieving an older version, it does encode each state in a representation that, when taken out of the context of its nearest versions (the version before and after it), may not provide a viewer with a good sense of its role in the overall project. 
+	I began to wonder what, when freed from preoccupations with the macrotemporal (Roads 3) accounting and subsequent representation of this paper's ontogenesis, what specific action could define the shorter temporal segmentations of the process? This particular problem offered the potential of a new way of approaching the work. While the VCS used in the aforementioned papers written in the spring of last year was sufficient for the contemporaneous documentation of changes to a project, it used a lean method of revision tracking referred to as delta encoding. Rather than store every new state of the project in the archive, it instead stores only what has changed, which it calls a 'diff' [[cite git?]], as a means of saving storage space.[[could mention this is similar to how video compression works, ie. only note the changed pixels from frame to frame, except for the keyframe]]. While this method is suitable for retrieving an older version, it does encode each state in a representation that, when taken out of the context of its nearest versions (the version before and after it), may not provide a viewer with a good sense of its role in the overall project. 
 		<p>
 
-
-
-	So I set out to be able to store the full context of each save state. To do so, I wrote a small computer program using node.js and javascript, which would run on the command line in the background while I worked. The first task was to collect the diff information from a new save state, and provide that within represent a new save state as a web pag
-
-
-	The result was that for each time that I saved this very document, a copy would be produced and renamed with its numbered place in the project's history, along with a diff that included the full scope of the state it is describing. 
-
-
-	<p>
-		<p>
-
-<figure> 
-  <figcaption>Storing the full context of each save state of this paper 'index.html'</figcaption>
-
-<pre>
-  <code contenteditable spellcheck="false">
-var watch = require('node-watch'); 
-
-var count = 0; //this is the total number of .html files already in the folder. 
-
-var util = require('util')
-var exec = require('child_process').exec;
-var child;
-var child2;
-var child3;
-var child4;
-var child5;
-var child6;
-
-const delay = require('delay');
-
-var files = [
-  //'/path/to/file',
-  'index.html'
-];
-
-watch('index.html', { recursive: true }, function(evt, name) {
-  console.log('%s changed.', name);
-
-{count++;}
-
-// output current state of git to a .diff file
-child = exec("git diff -U$(wc -l /Users/mp/thst6329/docs/index.html | xargs) > ethnography.diff")
-
-child6 = exec("cp /Users/mp/thst6329/docs/index.html /Users/mp/thst6329/docs/index" + count + ".html")
-//convert the .diff file to html using diff2html
-child2 = exec("diff2html -i file ethnography.diff -F page" + count + ".html -- -M HEAD~1");
-console.log("page" + count + ".html")
-        // Executed after 200 milliseconds 
-
-//couldn't get the 'promise' to work, so using just a delay, add the unstaged changes
-delay(500)
-   
-    .then(() => {
-    	child3 = exec("git add .");
-    	
-    });
-
-
-//wait until end, then autocommit!
-delay(1000)
-    
-.then(() => {
-	child4 = exec('git commit -m "autocommit " + count + " for the ethnography paper"');
-    console.log("autocommit " + count + " for the ethnography paper")
-
-        // Executed after 200 milliseconds 
-    });
-});
-
-    </code>
-  </pre>
-</figure>
-
-			<p>
-				<p>
-
-
+	To overcome this limitation, I wrote a small computer program that  
 
 	<BLOCKQUOTE>
 		For Pink, "A methodology based in and a commitment to understanding the senses provides a route to forms of knowledge and knowing not accounted for in conventional forms of ethnography. It often leads us to the normally not spoken, the invisible and the unexpected -- those things that people do not perhaps neessarily think it would be worth mentioning, or those things that tend to be felt or sensed ratber than spoken about." (Pink 53)
@@ -143,7 +66,7 @@ delay(1000)
 
 
 
-			
+			What purpose would knowing the length of a process serve? I am less concerned with the macrotemporal (macrogestural) length of a project, a value which could also be derived by  means other than a linear, potentially very long recording, than by the n-temporal segments in between. 
 
 			<p> for the bulk of the writing of this ethnography, I wanted to have a copy of every single saved state of the paper [[and, WHY did you want this? how to relate to course material?]]. I then had the idea to have each state represented in html rendered as a page -- like the final version would be -- but also to verbosely label the changes between each of the states, a form of documentation referred to as delta encoding. (cite) 
 	<br>[[more on delta encoding later? With delta encoding, ]] 
@@ -197,12 +120,17 @@ For Pink, "A methodology based in and a commitment to understanding the senses p
 	<p> Linking <a href="#modulation">modulation to</a> where Pink notes that "...Seremetakis suggests that 'sensory memory or the mediation on the historical substance of experience is not mere repetition but transformation that brings the past inot the present as a natal event. (1994: 7)" (Pink 44)
 
 	
- 
+ s
 <HR>
-</BODY> 
+</BODY> dff
 </HTML>
 
 
+can you make hyperlinks to different sections of the html document. for example, allowing you to make explicit links between how you  make connections within idea of the book. 
 
 
 
+
+
+
+j this change will be available at <a href="page4.html"> dg test s d
