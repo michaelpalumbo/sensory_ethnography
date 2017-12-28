@@ -1,8 +1,8 @@
 diff --git a/docs/index.html b/docs/index.html
-index c0257e0..20d2507 100644
+index dec902c..18669ab 100644
 --- a/docs/index.html
 +++ b/docs/index.html
-@@ -1,40 +1,28 @@
+@@ -1,30 +1,30 @@
  <!DOCTYPE html>
  <html>
  <HEAD>
@@ -26,19 +26,10 @@ index c0257e0..20d2507 100644
  
  <p> To view all of the versions of this imaginitive ethnography, <a href="version_index.html" target="_blank">click this link.</a> 
  
--<p id="demo"></p>
+-<p> To read the rest of the imaginitive ethnography, <a href="https://michaelpalumbo.github.io/thst6329/the_paper">please click here</a>
++<p> To read the rest of the imaginitive ethnography, <a href="https://michaelpalumbo.github.io/thst6329/the_paper">please click here.</a>
  
--<script>
--var page = parseInt((Math.random() * (310 - 1 + 1)), 10) + 1;
--
--if (Math.random() > 0.00000000000000001) {
--       text = "<a href='index" + page + ".html'>Visit a version of the Imaginitive Ethnography, 'version " + page + "' target="_blank"</a><p><a href='page" + page + ".html'>Visit a version of the Imaginitive Ethnography, 'version " + page + "'</a>";
--} else {
--
--
--}
--document.getElementById("demo").innerHTML = text;
--</script>
+ 
  
  </body>
  </html>

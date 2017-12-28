@@ -4,10 +4,10 @@
 <p id="demo"></p>
 
 <script>
-var page = parseInt((Math.random() * (310 - 1 + 1)), 10) + 1;
+var page = parseInt((Math.random() * (306 - 1 + 1)), 10) + 1;
 
 if (Math.random() > 0.00000000000000001) {
-       text = "<a target='_blank' href='index" + page + ".html'>View <i>version " + page + "</i> of the Imaginitive Ethnography</a>" + "<p><a target='_blank' href='page" + page + ".html'>View the changes made in <i>version " + page + "</i> of the Imaginitive Ethnography</a>"; 
+       text = "<a target='_blank' href='https://michaelpalumbo.github.io/thst6329/index" + page + ".html'>View <i>version " + page + "</i> of the Imaginitive Ethnography</a>" + "<p><a target='_blank' href='https://michaelpalumbo.github.io/thst6329/page" + page + ".html'>View the changes made in <i>version " + page + "</i> of the Imaginitive Ethnography</a>"; 
 
 } else {
 
@@ -17,8 +17,6 @@ document.getElementById("demo").innerHTML = text;
 </script>
 <input type="button" value="Click to load another version" onClick="window.location.href=window.location.href">
 
-<form action="http://google.com"  target="_blank">
-    <input type="submit" value="Go to Google" />
 </form>
 </body>
 </html>
