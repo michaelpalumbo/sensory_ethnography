@@ -21,7 +21,19 @@ A detailed list of what changed, where '+' represents additions, and '-' represe
 
 <p> To view all of the versions of this imaginitive ethnography, <a href="version_index.html" target="_blank">click this link.</a> 
 
+<p id="demo"></p>
 
+<script>
+var page = parseInt((Math.random() * (310 - 1 + 1)), 10) + 1;
+
+if (Math.random() > 0.00000000000000001) {
+       text = "<a href='index" + page + ".html'>Visit a version of the Imaginitive Ethnography, 'version " + page + "' target="_blank"</a><p><a href='page" + page + ".html'>Visit a version of the Imaginitive Ethnography, 'version " + page + "'</a>";
+} else {
+
+
+}
+document.getElementById("demo").innerHTML = text;
+</script>
 
 </body>
 </html>
